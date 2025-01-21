@@ -5,8 +5,8 @@
 #include <DallasTemperature.h> // Biblioteca para trabalhar com sensores DS18B20
 
 // Credenciais de acesso Wi-Fi
-const char* ssid = "Mylena";
-const char* password = "marjad1730";
+const char* ssid = "LMSwifi";
+const char* password = "dylanisgod";
 
 // Cria o objeto do servidor web na porta 80
 AsyncWebServer server(80);
