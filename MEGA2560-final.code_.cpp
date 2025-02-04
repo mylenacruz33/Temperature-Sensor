@@ -1,16 +1,17 @@
+// Inclusão das bibliotecas
 #include <OneWire.h>
 #include <DallasTemperature.h>
-
+// Definição do pino em que o sensor está conectado
 #define ONE_WIRE_BUS 12  // Pino onde o sensor DS18B20 está conectado
-
+// Utilização das bibliotecas
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-
-DeviceAddress sensor1;  // Endereço do sensor
-
+// Endereço do sensor
+DeviceAddress sensor1;  
+// Função que será utilizada para o tempo de delay
 unsigned long delayTime;
-
-void setup() {  // Estabelecimento das conexões serial
+// Estabelecimento das conexões serial
+void setup() {  
   Serial.begin(115200);
   Serial3.begin(115200);
   Serial.println();
