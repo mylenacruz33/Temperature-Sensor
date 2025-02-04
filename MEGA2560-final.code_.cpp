@@ -10,7 +10,7 @@ DeviceAddress sensor1;  // Endereço do sensor
 
 unsigned long delayTime;
 
-void setup() {
+void setup() {  // Estabelecimento das conexões serial
   Serial.begin(115200);
   Serial3.begin(115200);
   Serial.println();
@@ -36,6 +36,7 @@ void setup() {
 
 float temperature;
 
+// Solicitação dos valores de temperatura com os rótulos de tempo
 void loop() {
   while (Serial3.available()) {
     Serial.print((char)Serial3.read());
@@ -51,6 +52,7 @@ void loop() {
   Serial3.println(" K");
 }
 
+// Conversão e Impressão dos dados da temperatura 
 void printDS18B20() {
   sensors.requestTemperatures();  // Solicita a leitura da temperatura
   delay(200);  // Aguarda 200ms para garantir a leitura
